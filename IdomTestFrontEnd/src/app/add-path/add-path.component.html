@@ -1,0 +1,35 @@
+<h3>Út hozzáadása</h3>
+<form (ngSubmit) = "onSubmit()">
+    <div class = "form-group">
+        <label> Honnan</label>
+        <input type = "text" class = "from-control" id = "fromWhere"
+        [(ngModel)] = "path.fromWhere" name = "fromWhere">
+    </div>
+    <div class = "form-group">
+        <label> Hová</label>
+        <input type = "text" class = "from-control" id = "toWhere"
+        [(ngModel)] = "path.toWhere" name = "toWhere">
+    </div>
+    <div class = "form-group">
+        <label> Kilóméter óra állása</label>
+        <input type = "text" class = "from-control" id = "kilometreStance"
+        [(ngModel)] = "path.kilometreStance" name = "kilometreStance">
+    </div>
+    <div class = "form-group">
+        <label> Utasok száma</label>
+        <input type = "text" class = "from-control" id = "numberOfTransportedPassengers"
+        [(ngModel)] = "path.numberOfTransportedPassengers" name = "numberOfTransportedPassengers">
+    </div>
+    <div class = "form-group">
+        <label> Vezető neve</label>
+        <input type = "text" class = "from-control" id = "driverName"
+        [(ngModel)] = "path.driverName" name = "driverName">
+    </div>
+    <div class = "form-group">
+        <label> Végdátum (yyyy-MM-dd HH:mm:ss)</label>
+        <input type = "text" class = "from-control" id = "endDate"
+        [(ngModel)] = "path.endDate" name = "endDate">
+    </div>
+    <p></p>
+    <button class = "btn btn-success" type = "submit" [disabled]="(this.validateDateFormat())">Út hozzáadása</button>
+</form>

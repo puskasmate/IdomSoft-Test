@@ -1,0 +1,44 @@
+<div class="table-container">
+    <h2 class="table-heading">Az autóhoz tartozó menetlevelek</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Azonosító</th>
+            <th>Kezdődátum</th>
+            <th>Végdátum</th>
+            <th>Eltelt idő</th>
+            <th>Megtett út</th>
+            <th>Szállított személyek száma</th>
+            <th>Kilóméter óra állása kezdetkor</th>
+            <th>Ár</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="itineraries?.length == 0">
+            <td colspan="5" style="text-align: center"><h2>Nem szerepel menetlevél az adatbázisban.</h2></td>
+          </tr>
+        <tr *ngFor = "let itinerary of itineraries" >
+            <td> {{ itinerary.id }} </td>
+            <td> {{ itinerary.startDate }} </td>
+            <td> {{ itinerary.endDate }} </td>
+            <td> {{ itinerary.duration }} perc</td>
+            <td> {{ itinerary.distance }} km</td>
+            <td> {{ itinerary.sumOfPassengers }} fő</td>
+            <td> {{ itinerary.startStance }} km</td>
+            <td> {{ itinerary.price }} ft</td>
+            <td>
+                <button type="button" (click)="getPathsToItinerary(itinerary.id)" class="btn btn-secondary" style="background-color: #4066ff;" >Menetlevél megtekintése</button>&nbsp;
+            </td>
+            <td>
+                <button type="button" (click)="deleteItinerary(itinerary.id)" class="btn btn-danger"  >Menetlevél törlése</button>&nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <button type="button" (click)="createItinerary()" style="background-color: #4066ff;" class="btn btn-secondary" >Menetlevél létrehozása</button>&nbsp;
+</div>
+</div>

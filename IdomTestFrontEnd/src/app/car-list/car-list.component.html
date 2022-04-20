@@ -1,0 +1,35 @@
+<div class="table-container">
+    <h2 class="table-heading">Autó Lista</h2>
+
+<table id = "cars" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Rendszám</th>
+            <th>Model</th>
+            <th>Üzemanyag típus</th>
+            <th>Utasok száma</th>
+            <th>Szín</th>
+            <th>Év</th>
+            <th>Fogyasztás</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="cars?.length == 0">
+            <td colspan="5" style="text-align: center"><h2>Nem szerepel autó az adatbázisban.</h2></td>
+        </tr>
+        <tr *ngFor = "let car of cars" >
+            <td> {{ car.licensePlateNumber }} </td>
+            <td> {{ car.model }} </td>
+            <td> {{ car.fuel.fuelType }} </td>
+            <td> {{ car.numberOfPassengers }} </td>
+            <td> {{ car.colour }} </td>
+            <td> {{ car.year }} </td>
+            <td> {{ car.consumption }} </td>
+            <td>
+                <button type="button" (click)="getItineraries(car.id)" style="background-color: #4066ff;" class="btn btn-secondary" >Menetlevelek megtekintése</button>&nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

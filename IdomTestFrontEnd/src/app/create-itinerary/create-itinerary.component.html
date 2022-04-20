@@ -1,0 +1,15 @@
+<h3>Menetlevél létrehozása</h3>
+<form (ngSubmit) = "onSubmit()">
+    <div class = "form-group">
+        <label> Kezdődátum (yyyy-MM-dd HH:mm:ss)</label>
+        <input type = "text" class = "from-control" id = "startDate"
+        [(ngModel)] = "itinerary.startDate" name = "startDate">
+    </div>
+    <div class = "form-group">
+        <label> Kilóméter óra állása kezdetben</label>
+        <input type = "text" class = "from-control" id = "startDate"
+        [(ngModel)] = "itinerary.startStance" name = "startStance">
+    </div>
+    <p></p>  
+    <button class = "btn btn-success" type = "submit" [disabled]="(this.validateDateFormat())">Létrehozás</button>
+</form>
