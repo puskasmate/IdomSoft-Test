@@ -52,27 +52,6 @@ public class IdomTestApiApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception
 	{
-		/*if (fuelRepository.findAll().size() == 0 && carService.getAllCars().size() == 0) {
-			Fuel diesel = new Fuel((long)1, "Dízel", 481);
-			Fuel petrol = new Fuel((long)2, "Benzin", 481);
-			fuelRepository.saveAll(List.of(diesel, petrol));
-			List<Fuel> fuels = fuelRepository.findAll();
-			Long dieselId = Long.valueOf(0);
-			Long petrolId = Long.valueOf(0);
-			if (fuels.get(0).getFuelType() == "Dízel") {
-				dieselId = fuels.get(0).getId();
-				petrolId = fuels.get(1).getId();
-			} else {
-				petrolId = fuels.get(0).getId();
-				dieselId = fuels.get(1).getId();
-			}
-			CarRequest car = new CarRequest("KFG-315", "Ford Mondeo", 4, "Fekete", 2015, (float)6.5, dieselId);
-			CarRequest car2 = new CarRequest("KJE-478", "Renault Megane", 4, "Szürke", 2013, (float)5.6, dieselId);
-			CarRequest car3 = new CarRequest("LAJ-385", "Volkswagen Passat", 4, "Kék", 2012, (float)7.2, petrolId);
-			carService.saveCar(car);
-			carService.saveCar(car2);
-			carService.saveCar(car3);
-		}*/
 		if (fuelRepository.findAll().size() == 0) {
 			Fuel diesel = new Fuel((long)1, "Dízel", 481);
 			Fuel petrol = new Fuel((long)2, "Benzin", 481);
