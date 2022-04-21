@@ -1,3 +1,4 @@
+import { not } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Path } from '../model/path/path';
@@ -24,10 +25,11 @@ export class AddPathComponent implements OnInit {
     this.createPath();
   }
 
-  validateDateFormat(){
+  validateInputFormat(){
     const userKeyRegExp = /^[0-9]{4}\-[0-9]{2}\-[0-9]{2} [0-9]{2}\:[0-9]{2}\:[0-9]{2}?$/;
 
-    if (userKeyRegExp.test(this.path.endDate)) {
+    if (userKeyRegExp.test(this.path.endDate) && this.path.driverName != '' &&
+     this.path.fromWhere != '' && this.path.toWhere != '' && this.path.kilometreStance > 0 && this.path.numberOfTransportedPassengers > 0) {
       return false;
     } else {
       return true;

@@ -37,10 +37,10 @@ export class CreateItineraryComponent implements OnInit {
     this.router.navigate([`/getItineraries/${carId}`]);
   }
 
-  validateDateFormat(){
+  validateInputFormat(){
     const userKeyRegExp = /^[0-9]{4}\-[0-9]{2}\-[0-9]{2} [0-9]{2}\:[0-9]{2}\:[0-9]{2}?$/;
 
-    if (userKeyRegExp.test(this.itinerary.startDate)) {
+    if (userKeyRegExp.test(this.itinerary.startDate) && this.itinerary.startStance > 0) {
       return false;
     } else {
       return true;

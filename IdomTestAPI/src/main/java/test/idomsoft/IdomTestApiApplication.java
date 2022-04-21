@@ -10,16 +10,12 @@ import test.idomsoft.dto.PathRequest;
 import test.idomsoft.entity.Car;
 import test.idomsoft.entity.Fuel;
 import test.idomsoft.entity.Itinerary;
-import test.idomsoft.repo.CarRepository;
 import test.idomsoft.repo.FuelRepository;
-import test.idomsoft.repo.ItineraryRepository;
-import test.idomsoft.repo.PathRepository;
 import test.idomsoft.service.car.CarService;
 import test.idomsoft.service.itinerary.ItineraryService;
 import test.idomsoft.service.path.PathService;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -28,12 +24,6 @@ public class IdomTestApiApplication implements CommandLineRunner {
 
 	@Autowired
 	FuelRepository fuelRepository;
-
-	@Autowired
-	CarRepository carRepository;
-
-	@Autowired
-	ItineraryRepository itineraryRepository;
 
 	@Autowired
 	ItineraryService itineraryService;
