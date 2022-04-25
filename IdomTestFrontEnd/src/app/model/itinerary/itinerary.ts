@@ -6,6 +6,7 @@ export class Itinerary {
     distance!: number;
     sumOfPassengers!: number;
     price!: number;
+    totalLiter!: number;
     startStance!: number;
     car_id!: number;
 }

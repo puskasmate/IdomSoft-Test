@@ -29,7 +29,7 @@ public class CarServiceImpl implements CarService {
         Car car = new Car();
         Fuel fuel = new Fuel();
         fuel = fuelRepository.findById(carRequest.getFuel_id()).get();
-        car.setColour(carRequest.getColour());
+        car.setColor(carRequest.getColor());
         car.setConsumption(carRequest.getConsumption());
         car.setModel(carRequest.getModel());
         car.setFuel(fuel);

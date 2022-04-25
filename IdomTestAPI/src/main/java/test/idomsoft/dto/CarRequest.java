@@ -12,7 +12,7 @@ public class CarRequest {
     private String licensePlateNumber;
     private String model;
     private int numberOfPassengers;
-    private String colour;
+    private String color;
     private int year;
     private Float consumption;
     private Long fuel_id;

@@ -40,6 +40,9 @@ public class Itinerary {
     @Column(name = "distance")
     private int distance;
 
+    @Column(name = "totalLitre")
+    private float totalLiter;
+
     @Column(name = "price")
     private float price;
 

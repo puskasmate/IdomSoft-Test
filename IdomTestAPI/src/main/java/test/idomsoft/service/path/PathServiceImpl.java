@@ -113,6 +113,7 @@ public class PathServiceImpl implements PathService{
         }
 
         itinerary.setDuration(getDiffBetweenDates(itinerary.getStartDate(), itinerary.getEndDate()));
+        itinerary.setTotalLiter((itinerary.getCar().getConsumption() / 100) * itinerary.getDistance());
         int fuelPrice = 0;
         fuelPrice = itinerary.getCar().getFuel().getPrice();
         itinerary.setPrice(((((float)itinerary.getDistance()/100)*itinerary.getCar().getConsumption())*(float)fuelPrice) + ((float)itinerary.getDistance()*(float)15));
@@ -135,6 +136,7 @@ public class PathServiceImpl implements PathService{
         int fuelPrice = 0;
         fuelPrice = itinerary.getCar().getFuel().getPrice();
         itinerary.setPrice(((((float)itinerary.getDistance()/100)*itinerary.getCar().getConsumption())*(float)fuelPrice) + ((float)itinerary.getDistance()*(float)15));
+        itinerary.setTotalLiter((itinerary.getCar().getConsumption() / 100) * itinerary.getDistance());
 
         return itinerary;
     }

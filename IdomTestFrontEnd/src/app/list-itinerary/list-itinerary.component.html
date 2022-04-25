@@ -11,6 +11,7 @@
             <th>Megtett út</th>
             <th>Szállított személyek száma</th>
             <th>Kilóméter óra állása kezdetkor</th>
+            <th>Elfogyaszott üzemanyag (liter)</th>
             <th>Ár</th>
             <th></th>
             <th></th>
@@ -28,7 +29,8 @@
             <td> {{ itinerary.distance }} km</td>
             <td> {{ itinerary.sumOfPassengers }} fő</td>
             <td> {{ itinerary.startStance }} km</td>
-            <td> {{ itinerary.price }} ft</td>
+            <td> {{ itinerary.totalLiter.toFixed(2) }} liter</td>
+            <td> {{ itinerary.price.toFixed(0) }} ft</td>
             <td>
                 <button type="button" (click)="getPathsToItinerary(itinerary.id)" class="btn btn-secondary" style="background-color: #4066ff;" >Menetlevél megtekintése</button>&nbsp;
             </td>

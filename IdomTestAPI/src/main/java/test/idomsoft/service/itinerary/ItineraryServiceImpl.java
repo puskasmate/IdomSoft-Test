@@ -43,6 +43,7 @@ public class ItineraryServiceImpl implements ItineraryService {
         itinerary.setSumOfPassengers(0);
         itinerary.setDuration(getDiffBetweenDates(itinerary.getStartDate(), itinerary.getEndDate()));
         itinerary.setPrice(0);
+        itinerary.setTotalLiter(0);
         itinerary.setStartStance(itineraryRequest.getStartStance());
         itinerary.setCar(car);
 

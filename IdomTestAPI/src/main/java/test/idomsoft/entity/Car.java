@@ -28,8 +28,8 @@ public class Car {
     @Column(name = "numberOfPassengers")
     private int numberOfPassengers;
 
-    @Column(name = "colour")
-    private String colour;
+    @Column(name = "color")
+    private String color;
 
     @Column(name = "year")
     private int year;
@@ -50,7 +50,7 @@ public class Car {
         this.licensePlateNumber = licensePlateNumber;
         this.model = model;
         this.numberOfPassengers = numberOfPassengers;
-        this.colour = colour;
+        this.color = colour;
         this.year = year;
         this.consumption = consumption;
         this.fuel = fuel;

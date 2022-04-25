@@ -6,7 +6,7 @@ export class Car {
     model!: string;
     fuelType!: string;
     numberOfPassengers!: number;
-    colour!: string;
+    color!: string;
     year!: number;
     consumption!: number;
     fuel!: Fuel
