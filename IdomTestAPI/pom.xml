@@ -15,6 +15,7 @@
 	<description>Application test.</description>
 	<properties>
 		<java.version>11</java.version>
+		<exec.mainClass>test.idomsoft.IdomTestApiApplication</exec.mainClass>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -66,6 +67,21 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>${exec.mainClass}</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
